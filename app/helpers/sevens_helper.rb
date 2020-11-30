@@ -1,0 +1,2 @@
+module SevensHelper
+end
