@@ -1,51 +1,21 @@
-<h1>トップページ</h1>
-
-
-
-
-
-
-<%# 2択
-<html>
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-<script language="JavaScript">
-<!--
-function msgboxOkCancel(){
-    var ans;
-
-    ans = confirm("OKとキャンセル の2択");
-    alert(ans);
-}
-
-
-function msgboxYesNo(){
-//  var ans;  /*  ←この変数は宣言しちゃダメ！  */
-
-    execScript('ans = msgbox("YesとNo の2択", vbYesNo + vbQuestion)', 'vbscript');
-
-    /*
-     *  Yesを選択すると 6(vbYesの値)
-     *  Noを選択すると、7(vbNoの値)　がansにセットされる
-     *  不思議な気分だ。。。
-     */
-    alert(ans);
-}
-// -->
-</script>
-<head>
+  <meta charset="utf-8">
+  <title>Quiz</title>
+</head>
 <body>
-<form>
+<h1>7つの習慣</h1>
+<a href="/sevens/judgment">診断する</a>
 
-<input type="button" value="OK / キャンセル" onClick="msgboxOkCancel();" />
-<br /><input type="button" value="はい / いいえ" onClick="msgboxYesNo();" />
-
-</form>
 </body>
-</html> %>
+</html>
 
 
-<%# javascript タイマー
-<!doctype html>
+
+
+
+<%# 
 <head>
 <noscript>
 <meta http-equiv="refresh"
