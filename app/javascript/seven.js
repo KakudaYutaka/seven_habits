@@ -47,10 +47,10 @@ function seven (){
 
 
     if (li.textContent === quizSet[currentNum].c[0]) {
-      li.classList.add('correct');
+      li.classList.add('yes');
       score++; //スコアを足す
     } else {
-      li.classList.add('wrong');
+      li.classList.add('no');
     }
 
     btn.classList.remove('disabled'); //nextボタンの色が変わる

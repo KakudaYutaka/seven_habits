@@ -22,12 +22,14 @@ body {
   list-style: none;
   padding: 0;
   margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
 }
 
 #choices > li {
   border: 1px solid #ccc;
   border-radius: 4px;
-  padding: 10px;
+  padding: 10px 85px;
   margin-bottom: 10px;
   cursor: pointer; /*カーソルプロパティをポインターに*/
 }
@@ -36,7 +38,7 @@ body {
   background-color:  #f8f8f8;
 }
 
-#choices > li.correct {
+#choices > li.yes {
   background: #d4edda;
   border-color: #c3e6cb;
   color: #155724;
@@ -44,7 +46,7 @@ body {
 }
 
 
-#choices > li.wrong {
+#choices > li.no {
   background: #f8d8da;
   border-color: #f5c6cb;
   color: #721c24;
