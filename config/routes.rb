@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   resources :sevens, only: :index do
     collection do
       get :judgment
+      get :ninety
+      get :sixty
+      get :thirty
+      get :ten
     end
   end
 end

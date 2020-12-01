@@ -4,4 +4,16 @@ class SevensController < ApplicationController
 
   def judgment
   end
+
+  def ninety
+  end
+
+  def sixty
+  end
+
+  def thirty
+  end
+
+  def ten
+  end
 end

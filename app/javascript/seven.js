@@ -88,13 +88,13 @@ function seven (){
       scoreLabel.textContent = `おつかれさまでした。\nScore: ${score} / ${quizSet.length}`; //あとで改行とスコアを消すこと htmlのp要素に追加 
       result.classList.remove('hidden'); //リザルトのクラスhiddenを外す
         if (score <= 3) {
-          submit.href = "https://www.yahoo.co.jp"
+          submit.href = "/sevens/ninety"
         } else if (score <= 7) {
-          submit.href = "https://google.com"
+          submit.href = "/sevens/sixty"
         } else if (score <= 12) {
-          submit.href = "https://www.youtube.com/"
+          submit.href = "/sevens/thirty"
         }else {
-          submit.href = "https://music.youtube.com/"
+          submit.href = "/sevens/ten"
         }
     } else{
       currentNum++;
