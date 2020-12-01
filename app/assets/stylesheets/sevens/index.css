@@ -1,0 +1,98 @@
+body {
+  background-color: #efdec1;
+  font-size: 14px;
+  font-family: verdana, sans-serif;
+}
+
+.container {
+  width: 400px;
+  margin: 8px auto;
+  background-color: #ffff;
+  border-radius: 4px; /* 枠の角をとる丸くなる*/
+  padding: 16px;
+  position: relative; /*集計結果の表示領域を絶対配置*/
+}
+
+#question {
+  margin-bottom: 16px;
+  font-weight: bold; /*文字太め*/
+}
+
+#choices {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 16px;
+}
+
+#choices > li {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer; /*カーソルプロパティをポインターに*/
+}
+
+#choices > li:hover {
+  background-color:  #f8f8f8;
+}
+
+#choices > li.correct {
+  background: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+  font-weight: bold;
+}
+
+
+#choices > li.wrong {
+  background: #f8d8da;
+  border-color: #f5c6cb;
+  color: #721c24;
+  font-weight: bold;
+}
+
+
+#btn, #result > a { /*リザルト直下のaにもこのスタイルを設定指示*/
+  background: #3498db;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 4px 0 #2880b9; /*下方向に 4px 、ぼかしはなしで色は濃い青の影*/
+}
+
+#btn.disabled { /*#btn に対して、 disabled クラスがついたらグレーのスタイルをつけるようにします。*/
+  background: #ccc;
+  box-shadow: 0 4px 0 #bbb;
+  opacity: 0.7;
+
+}
+
+#result {
+  position: absolute;
+  width: 300px;
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  top: 50px; /*ここから下は枠を中央揃えするためのもの*/
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-radius: 4px; /*文字を中央揃え*/
+  text-align: center;
+  transition: 0.4s; /*リザルト画面アニメーション*/
+}
+
+#result.hidden { /*リザルト画面を隠す*/
+  transform: translateY(-500px);
+}
+
+#result > p {
+  font-size: 24px;
+}
+
+#result > a { /*btnで変更されたものを変更*/
+  display: block;
+  text-decoration: none;
+}

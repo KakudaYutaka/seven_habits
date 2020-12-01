@@ -2,6 +2,6 @@ class SevensController < ApplicationController
   def index
   end
 
-  def show
+  def judgment
   end
 end
