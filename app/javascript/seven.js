@@ -5,6 +5,7 @@ function seven (){
   const btn = document.getElementById('btn');
   const result = document.getElementById('result'); //リザルト
   const scoreLabel = document.querySelector('#result > p'); //リザルトのpの位置を代入
+  const submit = document.getElementById("submit")
 
   const quizSet = shuffle([ //問題をシャッフル
     {q: '常識や「空気を読むこと」を意識しすぎた行動が多い', c: ['Yes', 'No']},
@@ -31,7 +32,7 @@ function seven (){
 
   function shuffle(arr) {
     for (let i = arr.length - 1; i > 0; i--) { // i が 0 より大きい間 i を 1 ずつ減らしながら処理してあげる
-      const j = Math.floor(Math.random() * (i + 1)); //ランダムに選ぶ範囲の終点のインデックスが今 i なので、 0 から i 番目のランダムな整数値を生成すれば良いですね。
+      const j = Math.floor(Math.random() * (i + 1)); //ランダムに選ぶ範囲の終点のインデックスがi、0 から i 番目のランダムな整数値を生成
       [arr[j], arr[i]] = [arr[i], arr[j]]; //分割代入
     }
     return arr;
@@ -60,8 +61,8 @@ function seven (){
     question.textContent = quizSet[currentNum].q;
 
     while (choices.firstChild) {                //choices の最初の子要素がある限り choices の最初の子要素を消す、
-      choices.removeChild(choices.firstChild);  //while ですが、このように () の中に単一のオブジェクトを入れる場合、それが false や null でない限り、こちらの {} （ブロック）の中の処理をくり返してくれます。
-    }                                           //choices.firstChild の値が null になるまでループが回って、結果的に choices の子要素が全て消えてくれるはずです。
+      choices.removeChild(choices.firstChild);  //whileは() の中に単一のオブジェクトを入れる場合、false や null でない限り{} （ブロック）の中の処理をくり返す
+    }                                           //choices.firstChild の値が null になるまでループが回って結果的に choices の子要素が全て消える。
 
     const quizSets = ([...quizSet[currentNum].c]); //YesNo繰り返し
     quizSets.forEach(choice => {
@@ -73,9 +74,6 @@ function seven (){
       choices.appendChild(li);
     });
 
-    if (currentNum === quizSet.length - 1) {  //setQuiz() のところで、もし currentNum が quizSet.length よりひとつ小さい値、つまり最後の問題だったらボタンのテキストを Show Score に変える　結果をみる
-      btn.textContent = 'Show Score';
-    }
   }
 
   setQuiz();
@@ -86,10 +84,18 @@ function seven (){
     }
     btn.classList.add('disabled');
 
-    if (currentNum === quizSet.length - 1) { // 問題を終えた時の処理　行った回数から問題の数は0からなので-1引いている
-      //console.log(`Score: ${score} / ${quizSet.length}`);
-      scoreLabel.textContent = `Score: ${score} / ${quizSet.length}`; //スコア文字htmlのp要素に追加
+    if (currentNum === quizSet.length - 1) { // 問題を終えた時の処理 行った回数から問題の数は0からなので-1引いている
+      scoreLabel.textContent = `おつかれさまでした。\nScore: ${score} / ${quizSet.length}`; //あとで改行とスコアを消すこと htmlのp要素に追加 
       result.classList.remove('hidden'); //リザルトのクラスhiddenを外す
+        if (score <= 3) {
+          submit.href = "https://www.yahoo.co.jp"
+        } else if (score <= 7) {
+          submit.href = "https://google.com"
+        } else if (score <= 12) {
+          submit.href = "https://www.youtube.com/"
+        }else {
+          submit.href = "https://music.youtube.com/"
+        }
     } else{
       currentNum++;
       setQuiz();
