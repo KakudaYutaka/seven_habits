@@ -1,4 +1,5 @@
 <%= form_with model: @seven, local: true do |f|%>
+    <%= render 'error_messages', model: f.object %> <%#エラーメッセージ変える%>
   <div class="field">
     <%= f.label :principal, "元金" %><br />
     <%= f.text_field :principal %>
