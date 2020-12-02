@@ -17,6 +17,4 @@ class SevensController < ApplicationController
   def ten
   end
 
-  def calc
-  end
 end
