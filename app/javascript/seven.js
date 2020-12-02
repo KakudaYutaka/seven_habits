@@ -6,6 +6,9 @@ function seven (){
   const result = document.getElementById('result'); //リザルト
   const scoreLabel = document.querySelector('#result > p'); //リザルトのpの位置を代入
   const submit = document.getElementById("submit")
+  // const count=document.getElementById("count");
+  // setInterval(function(){count.innerHTML--;},1000);
+  // setTimeout(function(){location.href="/sevens/ninety";},5000);
 
   const quizSet = shuffle([ //問題をシャッフル
     {q: '常識や「空気を読むこと」を意識しすぎた行動が多い', c: ['Yes', 'No']},
@@ -26,7 +29,15 @@ function seven (){
   let currentNum = 0;
   let isAnswered;
   let score = 0; //正答数管理数値
+  
+  // const start = document.getElementById('start');
 
+  // // HTMLElement.click()を使う場合
+  // function startTest () {
+  //     start.click();
+  //     console.log('Start!');
+  // }
+  // startTest();
 
 
 
@@ -39,8 +50,7 @@ function seven (){
   }
 
   function checkAnswer(li) {
-    // if (isAnswered === true) {
-    if (isAnswered) { // === true を省略
+    if (isAnswered === true) {
       return;
     }
     isAnswered = true;
