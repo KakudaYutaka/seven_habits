@@ -3,6 +3,7 @@ class SevensController < ApplicationController
   end
 
   def new
+    @seven = Seven.new
   end
 
   def create

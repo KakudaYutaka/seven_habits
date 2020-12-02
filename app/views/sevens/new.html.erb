@@ -1,0 +1,7 @@
+<%= form_with model: @sevn do |f| %>
+  <%= f.text_field :principal %>
+  <%= f.text_field :deposit %>
+  <%= f.collection_select(:annual_yield_id, AnnualYieldId.all, :id, :name, {}, {class:"select-box", id:"prefecture"}) %>
+  <%= f.collection_select(:years_id, YearsId.all, :id, :name, {}, {class:"select-box", id:"prefecture"}) %>
+  <%= f.submit "送信" %>
+<% end %>
