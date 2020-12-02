@@ -7,6 +7,7 @@ class SevensController < ApplicationController
   end
 
   def create
+    Seven.create(seven_params)
   end
 
   def show
@@ -25,6 +26,12 @@ class SevensController < ApplicationController
   end
 
   def ten
+  end
+
+  private
+
+  def seven_params
+    params.require(:seven).permit(:principal, :deposit, :annual_yield_id, :years_id)
   end
 
 end
