@@ -7,7 +7,10 @@ class SevensController < ApplicationController
   end
 
   def create
-    Seven.create(seven_params)
+    @seven = Seven.new(seven_params)
+    unless @seven.save
+      render :new
+    end
   end
 
   def show
