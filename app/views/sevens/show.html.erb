@@ -12,8 +12,11 @@
 <%= "#{@seven.years_id}年で#{@difference}円増えました" %>
 
 
-<%# "元金は#{@seven.principal}円、月々の積立額は#{@seven.deposit}円で年間#{@every_year}円積み立て"
-"運用利回り#{@seven.annual_yield_id}%で#{@seven.years_id}年経過すると"
-"#{@compound.floor}円" 
-"元金合計#{@principal2}円" 
-"#{@seven.years_id}年で#{@difference}円増えました" %>
+  <div class="links">
+    <a href="/sevens/new" class="change-btn">
+      ＜ 新しく計算する
+    </a>
+    <a href="/sevens" class="change-btn">
+      トップページへ ＞
+    </a>
+  </div>
