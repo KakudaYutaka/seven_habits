@@ -16,6 +16,7 @@ class SevensController < ApplicationController
   end
 
   def show
+    @seven = Seven.find(params[:id])
   end
 
   def judgment
