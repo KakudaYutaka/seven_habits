@@ -6,7 +6,7 @@ class Seven < ApplicationRecord
   end
 
 
-  with_options numericality: { other_than: 1, message: 'Select' } do
+  with_options numericality: { other_than: 0, message: 'Select' } do
     validates :annual_yield_id
     validates :years_id
   end
