@@ -8,7 +8,9 @@ class SevensController < ApplicationController
 
   def create
     @seven = Seven.new(seven_params)
-    unless @seven.save
+    if @seven.save
+      redirect_to seven_path(@seven.id)
+    else
       render :new
     end
   end
