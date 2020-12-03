@@ -1,0 +1,21 @@
+<%= form_with model: @seven, local: true do |f|%>
+    <%= render 'error_messages', model: f.object %> <%#エラーメッセージ変える%>
+  <div class="field">
+    <%= f.label :principal, "元金" %><br />
+    <%= f.text_field :principal %>
+  </div>
+  <div class="field">
+    <%= f.label :deposit, "毎月積立額" %><br />
+    <%= f.text_field :deposit %>
+  </div>
+  <div class="field"><%#ここに年利率を表記すること%>
+    <%= f.collection_select(:annual_yield_id, AnnualYield.all, :id, :name, {}, {class:"select-box", id:"prefecture"}) %>
+  </div>
+  <div class="field"><%#ここに積立年数表記すること%>
+    <%= f.collection_select(:years_id, Years.all, :id, :name, {}, {class:"select-box", id:"prefecture"}) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>
