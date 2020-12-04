@@ -7,7 +7,7 @@
 # @compound = @seven.principal 
 # @principal2 = @seven.principal
 
-# @seven.years_id * 12.times do |i|
+# (@seven.years_id * 12).times do |i|
 #   @compound =(@seven.compound + @seven.deposit) * (1 + @seven.annual_yield_id / 100.to_f / 12) #複利
 #   @principal2 += @seven.deposit #元金トータル
 # end
