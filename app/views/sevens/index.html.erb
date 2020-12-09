@@ -1,36 +1,47 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <title>Quiz</title>
-</head>
-<body>
-<h1>7つの習慣</h1>
-<a href="/sevens/judgment">診断する</a>
-
-<h1>人類最大の発見</h1>
-<a href="/sevens/new">発見しにいく</a>
-
-</body>
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <%= render 'header' %>
+    <section class="contents">
+      <div class="seven">
+        <div class="title">
+          <h1>7つの習慣</h1>
+        </div>
+        <div class="details">
+          <div class="icon">
+            <img src="/assets/seven.jpg" width="120" height="170" alt="7つの習慣のアイコンです">
+          </div>
+          <div class="text">
+            <ul class="index-ul">
+              <li>成功するには原則がある</li>
+              <li>その成功する確率を</li>
+              <li>簡易的に診断</li>
+            </ul>
+            <div class="btn"><a href="/sevens/judgment" class="button" >診断する</a></div>
+         </div>
+        </div>
+      </div>
+      <div class="human">
+        <div class="title">
+          <h1>宇宙で最も偉大な力</h1>
+        </div>
+        <div class="details">
+          <div class="icon">
+            <img src="/assets/einstein.jpg" width="120" height="170" alt="アインシュタインのアイコンです">
+          </div>
+          <div class="text">
+            <ul class="index-ul">
+              <li>アインシュタインは言った</li>
+              <li>宇宙で最も偉大な力</li>
+              <li>それは「複利」</li>
+            </ul>
+            <div class="btn"><a href="/sevens/new" class="button" >複利計算をする</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
-
-
-
-
-
-<%# 
-<head>
-<noscript>
-<meta http-equiv="refresh"
-content="5; URL=#">
-</noscript>
-<title></title>
-</head>
-<body>
-<p><span id="count">5</span>秒後に移動</p>
-<script>
-var count=document.getElementById("count");
-setInterval(function(){count.innerHTML--;},1000);
-setTimeout(function(){location.href="#";},5000);
-</script>
-</body> %>

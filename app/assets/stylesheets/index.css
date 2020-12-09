@@ -1,0 +1,84 @@
+.contents {
+  padding-left: 60px;
+  /* background-color: black; */
+  height: 600px;
+
+}
+
+.seven {
+  /* background-color: yellow; */
+  height: 250px;
+  padding-top: 100px;
+
+}
+
+.title h1 {
+  font-size: 40px;
+  margin-bottom: 0;
+  font-weight: bold;
+  /* background-color: violet; */
+}
+
+.details {
+  display: flex;
+  /* background-color: tomato; */
+}
+
+.icon {
+
+}
+
+.text {
+  margin-left: 32px;
+  width: 200px;
+  height: 170px;
+  /* background-color: blue; */
+  
+}
+
+.index-ul {
+  list-style: none;
+  
+
+}
+
+.index-ul li {
+  font-size: 16px;
+}
+
+.btn {
+  /* text-align: center; */
+}
+
+.human {
+  /* background-color: brown; */
+  height: 250px;
+  margin-top: 20px;
+  
+}
+
+
+
+
+.button {
+  display       : inline-block;
+  border-radius : 4px;          /* 角丸       */
+  font-size     : 12pt;        /* 文字サイズ */
+  text-align    : center;      /* 文字位置   */
+  cursor        : pointer;     /* カーソル   */
+  padding       : 12px 12px;   /* 余白       */
+  background    : #007700;     /* 背景色     */
+  color         : #ffffff;     /* 文字色     */
+  line-height   : 1em;         /* 1行の高さ  */
+  opacity       : 0.9;         /* 透明度     */
+  transition    : .3s;         /* なめらか変化 */
+  box-shadow    : 6px 6px 3px #666666;  /* 影の設定 */
+  margin-top: 47px;
+  text-decoration: none;
+  width: 150px;
+  margin-left: 0;
+}
+.button:hover {
+  box-shadow    : none;        /* カーソル時の影消去 */
+  opacity       : 1;           /* カーソル時透明度 */
+}
