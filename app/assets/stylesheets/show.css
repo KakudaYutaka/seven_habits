@@ -1,0 +1,28 @@
+.show-title {
+  margin-top: 100px;
+  padding-left: 60px;
+  font-size: 40px;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+
+.chart {
+  margin-top: 20px;
+  width: 45%;
+  padding-left: 60px;
+}
+
+.show-text {
+  padding-top: 30px;
+  padding-left: 120px;
+  line-height: 1.8;
+}
+
+.show-links {
+  padding-top: 30px;
+}
+
+.change-btn {
+  margin-right: 150px;
+}
