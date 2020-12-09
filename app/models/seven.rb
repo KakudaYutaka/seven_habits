@@ -1,10 +1,8 @@
 class Seven < ApplicationRecord
-
   with_options presence: true do
     validates :principal, numericality: { only_integer: true, allow_blank: true, message: 'Half-width number' }
     validates :deposit, numericality: { only_integer: true, allow_blank: true, message: 'Half-width number' }
   end
-
 
   with_options numericality: { other_than: 0, message: 'Select' } do
     validates :annual_yield_id
