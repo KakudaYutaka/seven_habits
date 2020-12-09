@@ -1,21 +1,35 @@
-<%= form_with model: @seven, local: true do |f|%>
-    <%= render 'error_messages', model: f.object %> <%#エラーメッセージ変える%>
-  <div class="field">
-    <%= f.label :principal, "元金" %><br />
-    <%= f.text_field :principal %>
-  </div>
-  <div class="field">
-    <%= f.label :deposit, "毎月積立額" %><br />
-    <%= f.text_field :deposit %>
-  </div>
-  <div class="field"><%#ここに年利率を表記すること%>
-    <%= f.collection_select(:annual_yield_id, AnnualYield.all, :id, :name, {}, {class:"select-box", id:"prefecture"}) %>
-  </div>
-  <div class="field"><%#ここに積立年数表記すること%>
-    <%= f.collection_select(:years_id, Years.all, :id, :name, {}, {class:"select-box", id:"prefecture"}) %>
-  </div>
+   <%= render 'header' %>
 
-  <div class="actions">
-    <%= f.submit "保存する", class: :form__btn  %>
-  </div>
-<% end %>
+<div class="form">
+  <div class="new-title">複利計算機</div>
+  <%= form_with model: @seven, local: true do |f|%>
+      <%= render 'error_messages', model: f.object %> <%#エラーメッセージ変える%>
+    <div class="field">
+      <%= f.label :principal, "元金" %><br />
+      <%= f.text_field :principal %>円
+    </div>
+    <div class="field">
+      <%= f.label :deposit, "毎月積立額" %><br />
+      <%= f.text_field :deposit %>円
+    </div>
+    <div class="field">
+      <%= f.label :annual_yield_id, "年利率" %><br />
+      <%= f.collection_select(:annual_yield_id, AnnualYield.all, :id, :name, {}, {class:"select-box", id:"prefecture"}) %>
+    </div>
+    <div class="field">
+      <%= f.label :years_id, "積立年数" %><br />
+      <%= f.collection_select(:years_id, Years.all, :id, :name, {}, {class:"select-box", id:"prefecture"}) %>
+    </div>
+    <div class="field">
+      <br />
+      <%= f.submit "計算する", class: :form__btn  %>
+    </div>
+  <% end %>
+  <ul class="new-ul">
+    <li>投資は自己責任です</li>
+    <li>当サイトは一切責任を負いません</li>
+    <li>利益にかけられる税率は含まれておりません</li>
+    <li>投資話を持ちかけられたときは必ず疑いから始めましょう</li>
+  </ul>
+    
+</div>

@@ -1,26 +1,23 @@
-<%= @seven.principal %>
-<%= @seven.deposit %>
-<%= @seven.annual_yield_id %>
-<%= @seven.years_id %>
-
-
-
-<%= "元金は#{@seven.principal}円、月々の積立額は#{@seven.deposit}円で年間#{@every_year}円積み立て" %>
-<%= "運用利回り#{@seven.annual_yield_id}%で#{@seven.years_id}年経過すると" %>
-<%= "#{@compound.floor}円" %>
-<%= "元金合計#{@principal2}円" %>
-<%= "#{@seven.years_id}年で#{@difference}円増えました" %>
-
-
-  <div class="links">
-    <a href="/sevens/new" class="change-btn">
-      ＜ 新しく計算する
-    </a>
-    <a href="/sevens" class="change-btn">
-      トップページへ ＞
-    </a>
+<%= render 'header' %>
+  <p class="show-title"><%= "#{@seven.years_id}年後#{@compound.floor.to_s(:delimited)}円になります" %></p>
+  <div class="chart">
+    <%= column_chart @column_chart, colors: ["#007700"]%>
   </div>
 
-  <div>
-    <%= column_chart @column_chart %>
+
+  <div class="show-text">
+    <p><%= "開始時の元金は#{@seven.principal.to_s(:delimited)}円" %></p>
+    <p><%= "月々の積立額は#{@seven.deposit.to_s(:delimited)}円で年間#{@every_year.to_s(:delimited)}円積み立てました" %></p>
+    <p><%= "運用利回り#{@seven.annual_yield_id}%で#{@seven.years_id}年経過すると#{@compound.floor.to_s(:delimited)}円になります" %></p>
+    <p><%= "#{@seven.years_id}年間の元金合計#{@principal2.to_s(:delimited)}円" %></p>
+    <p><%= "#{@seven.years_id}年間で#{@difference.to_s(:delimited)}円増えました" %></p>
+
+    <div class="show-links">
+      <a href="/sevens/new" class="change-btn">
+        ＜ 新しく計算する
+      </a>
+      <a href="/sevens" class="change-btn">
+        トップページへ ＞
+      </a>
+    </div>
   </div>

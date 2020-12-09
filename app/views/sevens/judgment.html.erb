@@ -2,9 +2,9 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
-  <title>Quiz</title>
 </head>
 <body>
+    <%= render 'header' %>
   <section class="container">
     <p id="question"></p>
     <ul id="choices"></ul>
@@ -13,10 +13,27 @@
 
     <!-- 集計画面 -->
     <section id="result" class="hidden">
-      <p></p> <!-- ここにスコア集計を持ってきてる -->
+      <p></p>
       <a href="" id="submit">結果を見る</a>
     </section>
   </section>
 
 </body>
 </html>
+
+<%# 
+<head>
+<noscript>
+<meta http-equiv="refresh"
+content="5; URL=#">
+</noscript>
+<title></title>
+</head>
+<body>
+<p><span id="count">5</span>秒後に移動</p>
+<script>
+var count=document.getElementById("count");
+setInterval(function(){count.innerHTML--;},1000);
+setTimeout(function(){location.href="#";},5000);
+</script>
+</body> %>

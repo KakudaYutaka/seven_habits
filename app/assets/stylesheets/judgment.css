@@ -1,12 +1,12 @@
 body {
-  background-color: #efdec1;
+  background-color: #FFFFDD;
   font-size: 14px;
   font-family: verdana, sans-serif;
 }
 
 .container {
-  width: 400px;
-  margin: 8px auto;
+  width: 490px;
+  margin: 100px auto;
   background-color: #ffff;
   border-radius: 4px; /* 枠の角をとる丸くなる*/
   padding: 16px;
@@ -29,8 +29,7 @@ body {
 #choices > li {
   border: 1px solid #ccc;
   border-radius: 4px;
-  padding: 10px 85px;
-  margin-bottom: 10px;
+  padding: 10px 105px;
   cursor: pointer; /*カーソルプロパティをポインターに*/
 }
 
@@ -41,7 +40,7 @@ body {
 #choices > li.yes {
   background: #d4edda;
   border-color: #c3e6cb;
-  color: #155724;
+  color: #007700;
   font-weight: bold;
 }
 
@@ -55,16 +54,16 @@ body {
 
 
 #btn, #result > a { /*リザルト直下のaにもこのスタイルを設定指示*/
-  background: #3498db;
+  background: #007700;
   padding: 8px;
   border-radius: 4px;
   cursor: pointer;
   text-align: center;
   color: #fff;
-  box-shadow: 0 4px 0 #2880b9; /*下方向に 4px 、ぼかしはなしで色は濃い青の影*/
+  box-shadow: 0 4px 0 #004200; /*下方向に 4px 、ぼかしはなしで色は濃い青の影*/
 }
 
-#btn.disabled { /*#btn に対して、 disabled クラスがついたらグレーのスタイルをつけるようにします。*/
+#btn.disabled { /*#btn に対して、 disabled クラスがついたらグレー*/
   background: #ccc;
   box-shadow: 0 4px 0 #bbb;
   opacity: 0.7;
@@ -92,9 +91,81 @@ body {
 
 #result > p {
   font-size: 24px;
+  padding: 10px;
 }
 
 #result > a { /*btnで変更されたものを変更*/
   display: block;
   text-decoration: none;
+}
+
+.result-contents {
+  margin-top: 100px;
+  margin-left: 60px;
+  /* background-color: white; */
+  line-height: 1.6;
+}
+
+.result-title {
+  font-size: 40px;
+  margin-bottom: 0;
+  font-weight: bold;
+  /* background-color: violet; */
+}
+
+.result-title span {
+  font-size: 45px;
+  margin-bottom: 0;
+  font-weight: bold;
+  /* background-color: violet; */
+}
+
+.result-text {
+  /* background-color: tomato; */
+  height: auto;
+}
+
+.first-line {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.second-line {
+  /* background-color: yellow; */
+  margin-top: 20px;
+}
+
+.result-text a {
+  font-weight: bold;
+}
+
+.ul-seven > li {
+  margin-top: 20px;
+}
+
+.ul-seven > li {
+  font-weight: bold;
+  /* background-color: teal; */
+}
+
+.ul-seven ul {
+  /* background-color: white; */
+  margin-left: 15px;
+}
+
+.seven-btn {
+  margin-left: 500px;
+  /* background-color: yellow; */
+}
+
+.references p {
+  /* background-color: turquoise; */
+  margin-top: 50px;
+  
+}
+
+.references {
+  padding-bottom: 50px;
+  /* background-color: wheat; */
+
 }

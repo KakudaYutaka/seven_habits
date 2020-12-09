@@ -95,7 +95,7 @@ function seven (){
     btn.classList.add('disabled');
 
     if (currentNum === quizSet.length - 1) { // 問題を終えた時の処理 行った回数から問題の数は0からなので-1引いている
-      scoreLabel.textContent = `おつかれさまでした。\nScore: ${score} / ${quizSet.length}`; //あとで改行とスコアを消すこと htmlのp要素に追加 
+      scoreLabel.textContent = `おつかれさまでした。`; //あとで改行とスコアを消すこと htmlのp要素に追加 
       result.classList.remove('hidden'); //リザルトのクラスhiddenを外す
         if (score <= 3) {
           submit.href = "/sevens/ninety"
