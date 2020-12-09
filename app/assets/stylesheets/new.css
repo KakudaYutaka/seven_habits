@@ -1,0 +1,29 @@
+.form {
+  padding-top: 100px;
+  padding-left: 60px;
+}
+
+.new-title {
+  font-size: 40px;
+  padding-left: 7px;
+  font-weight: bold;
+}
+
+.field {
+  margin: 10px;
+}
+
+input#seven_principal {
+  width: 70px;
+  text-align: right;
+}
+
+
+input#seven_deposit {
+  width: 70px;
+  text-align: right;
+}
+
+.new-ul { margin-left:25px; }
+.new-ul li { display:block; position:relative; }
+.new-ul li:before { content:'※'; position:absolute; left:-15px; /* インデントさせるため「※」だけを左に */ }
