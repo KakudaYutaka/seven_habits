@@ -4,6 +4,8 @@ class Seven < ApplicationRecord
     validates :deposit, numericality: { only_integer: true, allow_blank: true, message: 'Half-width number' }
   end
 
+  validates :principal, numericality: { less_than: 10_000_001, allow_blank: true, message: 'Out of setting range' }
+
   with_options numericality: { other_than: 0, message: 'Select' } do
     validates :annual_yield_id
     validates :years_id
