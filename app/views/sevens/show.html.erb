@@ -1,5 +1,5 @@
 <%= render 'header' %>
-  <p class="show-title"><%= "#{@seven.years_id}年後#{@compound.floor.to_s(:delimited)}円になります" %></p>
+  <p class="show-title"><%= "#{@seven.years_id}年後 #{@digit_compound}円" %></p>
   <div class="chart">
     <%= column_chart @column_chart, colors: ["#007700"]%>
   </div>

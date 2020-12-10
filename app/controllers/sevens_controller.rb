@@ -55,6 +55,20 @@ class SevensController < ApplicationController
       @principal2 += @seven.deposit # 元金トータル
     end
 
+
+    def digit(str)
+      digit_str = str
+      digit_str.insert(-5, '万') if digit_str.length >= 5
+      digit_str.insert(-10, '億') if digit_str.length >= 10
+      digit_str.insert(-15, '兆') if digit_str.length >= 15
+      digit_str.insert(-20, '京') if digit_str.length >= 20
+      digit_str
+    end
+    
+    str = @compound.floor.to_s
+    
+    @digit_compound = digit(str)
+
     @difference = (@compound.floor - @principal2.floor) # 複利結果から元金トータルの差額
   end
 
