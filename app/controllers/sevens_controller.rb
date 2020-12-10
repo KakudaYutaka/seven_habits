@@ -1,5 +1,6 @@
 class SevensController < ApplicationController
   before_action :calc_params, only: :show
+  before_action :show_set, only: :show
 
   def index
   end
@@ -18,9 +19,6 @@ class SevensController < ApplicationController
   end
 
   def show
-    # 配列の場合
-    # @line_chart = [['2014-04-01', 30], ['2014-04-02', 40], ['2014-04-03', 50]]
-    # ハッシュの場合
     @column_chart = { '元金' => @seven.principal, "#{@seven.years_id}年間積立合計" => @deposit2, '元金合計' => @principal2, "#{@seven.years_id}年後" => @compound.floor }
   end
 
@@ -58,5 +56,11 @@ class SevensController < ApplicationController
     end
 
     @difference = (@compound.floor - @principal2.floor) # 複利結果から元金トータルの差額
+  end
+
+  def show_set #レコード作成2秒経過でアクセス不可
+    if Time.current > @seven.created_at + 2
+      redirect_to root_path
+    end
   end
 end
