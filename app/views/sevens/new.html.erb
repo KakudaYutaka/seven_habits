@@ -6,11 +6,11 @@
       <%= render 'error_messages', model: f.object %> <%#エラーメッセージ変える%>
     <div class="field">
       <%= f.label :principal, "元金" %><br />
-      <%= f.text_field :principal %>円
+      <%= f.text_field :principal, placeholder:"例)100000"%>円
     </div>
     <div class="field">
       <%= f.label :deposit, "毎月積立額" %><br />
-      <%= f.text_field :deposit %>円
+      <%= f.text_field :deposit, placeholder:"例)33000" %>円
     </div>
     <div class="field">
       <%= f.label :annual_yield_id, "年利率" %><br />

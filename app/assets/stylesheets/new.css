@@ -14,15 +14,20 @@
 }
 
 input#seven_principal {
-  width: 70px;
+  width: 75px;
   text-align: right;
 }
-
 
 input#seven_deposit {
-  width: 70px;
+  width: 75px;
   text-align: right;
 }
+
+
+input:focus::placeholder {
+	color: transparent;
+}
+
 
 .new-ul { margin-left:25px; }
 .new-ul li { display:block; position:relative; }

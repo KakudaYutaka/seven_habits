@@ -1,0 +1,8 @@
+ja:
+ activerecord:
+   attributes:
+     seven:
+       principal: 元金
+       deposit: 毎月積立額
+       annual_yield_id: 年利率
+       years_id: 積立年数
