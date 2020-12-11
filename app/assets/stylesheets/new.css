@@ -32,3 +32,8 @@ input:focus::placeholder {
 .new-ul { margin-left:25px; }
 .new-ul li { display:block; position:relative; }
 .new-ul li:before { content:'※'; position:absolute; left:-15px; /* インデントさせるため「※」だけを左に */ }
+
+.new-link {
+  margin-top: 50px;
+  padding-left: 10px;
+}

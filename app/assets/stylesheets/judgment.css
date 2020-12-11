@@ -70,6 +70,16 @@ body {
 
 }
 
+.remaining {
+  /* background-color: gray; */
+  margin-top: 10px;
+  text-align: center;
+}
+
+#question_count {
+  font-weight: 550;
+}
+
 #result {
   position: absolute;
   width: 300px;

@@ -5,10 +5,9 @@ function seven (){
   const btn = document.getElementById('btn');
   const result = document.getElementById('result'); //リザルト
   const scoreLabel = document.querySelector('#result > p'); //リザルトのpの位置を代入
-  const submit = document.getElementById("submit")
-  // const count=document.getElementById("count");
-  // setInterval(function(){count.innerHTML--;},1000);
-  // setTimeout(function(){location.href="/sevens/ninety";},5000);
+  const submit = document.getElementById("submit");
+  const count_question_count = document.getElementById("question_count");  
+
 
   const quizSet = shuffle([ //問題をシャッフル
     {q: '常識や「空気を読むこと」を意識しすぎた行動が多い', c: ['Yes', 'No']},
@@ -26,10 +25,12 @@ function seven (){
     {q: 'まんがは読むが、活字の本は1年で5冊も読まない', c: ['Yes', 'No']},
     {q: '定期的な運動は特にしていない', c: ['Yes', 'No']},
   ]);
+  
   let currentNum = 0;
   let isAnswered;
   let score = 0; //正答数管理数値
-  
+  let countDownValue = 14; //残りの問題数
+
   // const start = document.getElementById('start');
 
   // // HTMLElement.click()を使う場合
@@ -110,7 +111,10 @@ function seven (){
       currentNum++;
       setQuiz();
     }
+    count_question_count.innerHTML = countDownValue - currentNum;
   });
 }
+
+
 
 window.addEventListener('load', seven);
