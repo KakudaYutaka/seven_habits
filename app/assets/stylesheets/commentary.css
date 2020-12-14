@@ -1,0 +1,50 @@
+.commentary-contents {
+  margin-top: 100px;
+  margin-left: 60px;
+  /* background-color: white; */
+  line-height: 1.6;
+  padding-bottom: 50px;
+}
+
+.commentary-title {
+  font-size: 40px;
+  margin-bottom: 0;
+  font-weight: bold;
+  /* background-color: violet; */
+}
+
+.commentary-title span {
+  font-size: 45px;
+  margin-bottom: 0;
+  font-weight: bold;
+  /* background-color: violet; */
+}
+
+.commentary-text {
+  /* background-color: tomato; */
+  height: auto;
+}
+
+.ul-commentary > li {
+  margin-top: 20px;
+}
+
+.ul-commentary > li > span {
+  font-weight: bold;
+  font-size: 20px;
+  /* background-color: teal; */
+}
+
+.ul-commentary {
+  /* background-color: red; */
+  padding: 20px 0;
+}
+
+.ul-commentary-ul > li {
+  margin-left: 20px;
+}
+
+.commentary-btn {
+  margin-left: 500px;
+  /* background-color: yellow; */
+}
