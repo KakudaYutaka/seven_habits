@@ -9,6 +9,7 @@ Rails.application.routes.draw do
       get :thirty
       get :ten
       get :calc
+      get :commentary
     end
   end
 end
