@@ -37,6 +37,9 @@ class SevensController < ApplicationController
   def ten
   end
 
+  def commentary
+  end
+
   private
 
   def seven_params
