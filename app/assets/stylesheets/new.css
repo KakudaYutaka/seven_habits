@@ -8,6 +8,17 @@
   padding-left: 7px;
   font-weight: bold;
 }
+#autobtn {
+  margin: 10px;
+}
+
+#open {
+  margin-left: 10px;
+}
+
+.open-text {
+  margin-left: 20px;
+}
 
 .field {
   margin: 10px;
@@ -26,6 +37,11 @@
 
 input:focus::placeholder {
 	color: transparent;
+}
+
+#autobtn2 {
+  margin-top: 20px;
+  margin-left: 10px;
 }
 
 
