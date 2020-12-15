@@ -2,7 +2,7 @@
 
 <div class="form">
   <div class="new-title">複利計算機</div>
-      <!-- 折り畳まれ部分 -->
+  <!-- 折り畳まれ部分 -->
   <div id="open" style="display:none;clear:both;">
     <p>複利の力を知るためにいろいろな値を入力して試してください。</p>
     <br>
@@ -27,7 +27,6 @@
 
   </div>
   <!--// 折り畳まれ部分 -->
-
   <button id="autobtn">入力に迷ったときはこちら</button>
   <%= form_with model: @seven, local: true do |f|%>
       <%= render 'error_messages', model: f.object %> <%#エラーメッセージ変える%>
