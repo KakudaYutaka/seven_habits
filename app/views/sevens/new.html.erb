@@ -2,23 +2,50 @@
 
 <div class="form">
   <div class="new-title">複利計算機</div>
+      <!-- 折り畳まれ部分 -->
+  <div id="open" style="display:none;clear:both;">
+    <p>複利の力を知るためにいろいろな値を入力して試してください。</p>
+    <br>
+    <p>今回は現実的に「つみたてNISA」を元に入力します。</p>
+    <p>つみたてNISAの開始に元金は必要ないので0円です。</p>
+    <p>正確には初回積み立てるお金が必要となります。</p>
+    <br>
+    <p>毎月積立額は最大33333円です。</p>
+    <br>
+    <p>年利率は10％も可能ですが、今回は5％にしております。</p>
+    <p>試しに年利率10％と、ぜひ比較してみてください。</p>
+    <br>
+    <p>2020年現在、</p>
+    <p>つみたてNISAによる購入は2037年で終了予定なので</p>
+    <p>積立年数は17年です。</p>
+    <p>非課税の対象は購入後から20年となります。</p>
+    <p>例)2021年に積み立てた分の利益は20年目の2040年まで非課税</p>
+    <p>&emsp;2030年に積み立てた分の利益は2049年まで非課税</p>
+    <br>
+    <p>実際につみたてNISAを開始する場合は</p>
+    <p>分配金を単利運用の「受取型」ではなく、複利運用となる「再投資型」にしてください。</p>
+
+  </div>
+  <!--// 折り畳まれ部分 -->
+
+  <button id="autobtn">入力に迷ったときはこちら</button>
   <%= form_with model: @seven, local: true do |f|%>
       <%= render 'error_messages', model: f.object %> <%#エラーメッセージ変える%>
     <div class="field">
       <%= f.label :principal, "元金" %><br />
-      <%= f.text_field :principal, placeholder:"例)100000"%>円
+      <%= f.text_field :principal, id:"principal", placeholder:"例)100000"%>円
     </div>
     <div class="field">
       <%= f.label :deposit, "毎月積立額" %><br />
-      <%= f.text_field :deposit, placeholder:"例)33000" %>円
+      <%= f.text_field :deposit, id:"deposit", placeholder:"例)33000" %>円
     </div>
     <div class="field">
       <%= f.label :annual_yield_id, "年利率" %><br />
-      <%= f.collection_select(:annual_yield_id, AnnualYield.all, :id, :name, {}, {class:"select-box", id:"prefecture"}) %>
+      <%= f.collection_select(:annual_yield_id, AnnualYield.all, :id, :name, {}, {class:"select-box", id:"annual"}) %>
     </div>
     <div class="field">
       <%= f.label :years_id, "積立年数" %><br />
-      <%= f.collection_select(:years_id, Years.all, :id, :name, {}, {class:"select-box", id:"prefecture"}) %>
+      <%= f.collection_select(:years_id, Years.all, :id, :name, {}, {class:"select-box", id:"years"}) %>
     </div>
     <div class="field">
       <br />
@@ -31,6 +58,7 @@
     <li>利益にかけられる税率は含まれておりません</li>
     <li>投資話を持ちかけられたときは必ず疑いから始めましょう</li>
   </ul>
+        <button id="autobtn2">みんなウォーレンバフェット</button>
 
     <div class="new-link">
       <a href="/sevens/" class="change-btn">

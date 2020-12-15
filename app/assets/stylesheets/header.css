@@ -23,10 +23,11 @@ div#header-bk {
 }
  
  
-div#header {
+#header > a {
   margin-left: 60px;
   font-size: 30px;
   color: #FFFFDD;
+  text-decoration: none;
 }
 
 /* フッターの固定 */
