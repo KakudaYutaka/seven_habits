@@ -9,8 +9,8 @@
     <p><%= "開始時の元金は#{@seven.principal.to_s(:delimited)}円" %></p>
     <p><%= "月々の積立額は#{@seven.deposit.to_s(:delimited)}円で年間#{@every_year.to_s(:delimited)}円積み立てました" %></p>
     <p><%= "運用利回り#{@seven.annual_yield_id}%で#{@seven.years_id}年経過すると#{@compound.floor.to_s(:delimited)}円になります" %></p>
-    <p><%= "#{@seven.years_id}年間の元金合計#{@principal2.to_s(:delimited)}円" %></p>
     <p><%= "#{@seven.years_id}年間で#{@difference.to_s(:delimited)}円増えました" %></p>
+    <p><%= "銀行に普通預金で積み立てした場合は#{@seven.years_id}年間で#{@bank.floor.to_s(:delimited)}円になり#{@bank_difference.to_s(:delimited)}円増えました" %></p>
 
     <div class="show-links">
       <a href="/sevens/new" class="change-btn">
