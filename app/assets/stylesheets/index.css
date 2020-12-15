@@ -24,10 +24,6 @@
   /* background-color: tomato; */
 }
 
-.icon {
-
-}
-
 .text {
   margin-left: 32px;
   width: 200px;
@@ -46,9 +42,7 @@
   font-size: 16px;
 }
 
-.btn {
-  /* text-align: center; */
-}
+
 
 .human {
   /* background-color: brown; */
