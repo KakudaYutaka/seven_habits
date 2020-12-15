@@ -19,7 +19,7 @@ class SevensController < ApplicationController
   end
 
   def show
-    @column_chart = { '元金' => @seven.principal, "#{@seven.years_id}年間積立合計" => @deposit2, "#{@seven.years_id}年後" => @compound.floor,"#{@seven.years_id}年後普通預金" => @bank.floor }
+    @column_chart = { '元金' => @seven.principal, "#{@seven.years_id}年間積立合計" => @deposit2, "#{@seven.years_id}年後" => @compound.floor, "#{@seven.years_id}年後普通預金" => @bank.floor }
   end
 
   def judgment
@@ -58,9 +58,9 @@ class SevensController < ApplicationController
       @compound = (@compound + @seven.deposit) * (1 + @seven.annual_yield_id / 100.to_f / 12) # 複利
       @principal2 += @seven.deposit # 元金トータル
     end
-    
+
     (12 * @seven.years_id).times do |_i|
-      @bank = (@bank + @seven.deposit) * (1 +  1 / 10000.to_f / 12) # 複利
+      @bank = (@bank + @seven.deposit) * (1 + 1 / 10_000.to_f / 12) # 複利
     end
 
     def digit(str)
@@ -71,18 +71,16 @@ class SevensController < ApplicationController
       digit_str.insert(-20, '京') if digit_str.length >= 20
       digit_str
     end
-    
+
     str = @compound.floor.to_s
-    
+
     @digit_compound = digit(str)
 
     @difference = (@compound.floor - @principal2.floor) # 複利結果から元金トータルの差額
-    @bank_difference = (@bank.floor - @principal2.floor) # 複利結果から元金トータルの差額
+    @bank_difference = (@bank.floor - @principal2.floor)
   end
 
-  def show_set #レコード作成2秒経過でアクセス不可
-    if Time.current > @seven.created_at + 2
-      redirect_to root_path
-    end
+  def show_set # レコード作成2秒経過でアクセス不可
+    redirect_to root_path if Time.current > @seven.created_at + 2
   end
 end
