@@ -13,12 +13,12 @@
   margin: 10px;
 }
 
-input#seven_principal {
+#principal {
   width: 75px;
   text-align: right;
 }
 
-input#seven_deposit {
+#deposit {
   width: 75px;
   text-align: right;
 }
@@ -36,4 +36,5 @@ input:focus::placeholder {
 .new-link {
   margin-top: 50px;
   padding-left: 10px;
+  padding-bottom: 50px;
 }
